@@ -1,12 +1,10 @@
 public class PrintFormatacaoNumeros {
     public static void main(String[] args) {
-        float taxa = 0.2456f;
+          float taxa = 0.2456f;
         float valor = 7654.321f;
-        System.out.printf("Valor: R$ %.5f\n",valor);
-
-        System.out.printf("Taxa: %.2f", taxa);
-
-        // System.out.printf("O valor de pi: %.3f", pi)
-
+        NumberFormat locale = NumberFormat.getInstance(new Locale("en", "US"));
+        String value = locale.format(valor);
+        System.out.println("Valor: R$ "+ value.substring(0,9));
+        System.out.printf("Taxa: %.2f%s", taxa, "%");
     }
 }
