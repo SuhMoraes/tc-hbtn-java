@@ -7,7 +7,7 @@ import java.util.Locale;
             float valor = 7654.321f;
             NumberFormat locale = NumberFormat.getInstance(new Locale("en", "US"));
             String value = locale.format(valor);
-            System.out.printf("Valor: R$ \n"+ value.substring(0,8));
+            System.out.printf("Valor: R$ "+ value.substring(0,8) + "\n");
             System.out.printf("Taxa: %.2f%s", taxa, "%");
             
         }
