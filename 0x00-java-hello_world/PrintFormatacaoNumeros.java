@@ -1,6 +1,6 @@
 public class PrintFormatacaoNumeros {
     public static void main(String[] args) {
-          float taxa = 0.2456f;
+        float taxa = 0.2456f;
         float valor = 7654.321f;
         NumberFormat locale = NumberFormat.getInstance(new Locale("pt","BR"));
         String value = locale.format(valor);
