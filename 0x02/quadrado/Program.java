@@ -1,4 +1,4 @@
-public class Programa {
+public class Program {
     public static void main(String[] args) {
         try {
             double lado1 = -5;
