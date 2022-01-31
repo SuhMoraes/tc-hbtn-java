@@ -1,5 +1,5 @@
 public class FormaGeometrica {
-    public static double area(){
+    public double area(){
         throw new UnsupportedOperationException("Funcao Area nao implementada");
     }
 }
