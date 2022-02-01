@@ -36,16 +36,15 @@ public class ContaBancariaBasica {
         this.taxaJurosAnual = taxaJurosAnual;
     }
 
-    public double depositar(double valor) throws OperacaoInvalidaException {
+    public void depositar(double valor) throws OperacaoInvalidaException {
         if (valor > 0 ) {
             saldo += valor;
         }else {
             throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0");
         }
-        return valor;
     }
 
-    public double sacar(double valor ) throws OperacaoInvalidaException {
+    public void sacar(double valor ) throws OperacaoInvalidaException {
         if (valor == 0 ) {
             throw new OperacaoInvalidaException("Valor de saque deve ser maior que 0");
         }else if (saldo >= valor) {
@@ -53,8 +52,6 @@ public class ContaBancariaBasica {
         }else {
             throw new OperacaoInvalidaException("Valor de saque deve ser maior que o saldo atual");
         }
-
-        return valor;
     }
 
     public double calcularTarifaMensal(){
