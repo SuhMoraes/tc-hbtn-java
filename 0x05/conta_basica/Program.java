@@ -11,7 +11,7 @@ public class Program {
             conta1.sacar(25);
             System.out.printf("Conta %s - saldo: %.2f\n", conta1.getNumeracao(), conta1.getSaldo());
             conta1.aplicarAtualizacaoMensal();
-            System.out.printf("Conta %s - saldo: %.2f\n\n", conta1.getNumeracao(), conta1.getSaldo());
+            System.out.printf("Conta %s - saldo: %.2f\n", conta1.getNumeracao(), conta1.getSaldo());
         } catch (Exception ex) {
             System.out.println(ex.getMessage() + "\n");
         }
