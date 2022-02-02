@@ -2,7 +2,7 @@ import java.util.Locale;
 
 public class Program {
     public static void main(String[] args) {
-        Locale.setDefault(new Locale("pt", "BR"));
+    	Locale.setDefault(new Locale("pt", "BR"));
         try {
             ContaBancariaBasica conta1 = new ContaBancariaBasica("AAA", 50.0);
             System.out.printf("Conta %s - saldo: %.2f\n", conta1.getNumeracao(), conta1.getSaldo());
@@ -11,7 +11,7 @@ public class Program {
             conta1.sacar(25);
             System.out.printf("Conta %s - saldo: %.2f\n", conta1.getNumeracao(), conta1.getSaldo());
             conta1.aplicarAtualizacaoMensal();
-            System.out.printf("Conta %s - saldo: %.2f\n", conta1.getNumeracao(), conta1.getSaldo());
+            System.out.printf("Conta %s - saldo: %.2f\n\n", conta1.getNumeracao(), conta1.getSaldo());
         } catch (Exception ex) {
             System.out.println(ex.getMessage() + "\n");
         }
@@ -24,7 +24,7 @@ public class Program {
             conta2.sacar(10);
             System.out.printf("Conta %s - saldo: %.2f\n", conta2.getNumeracao(), conta2.getSaldo());
             conta2.aplicarAtualizacaoMensal();
-            System.out.printf("Conta %s - saldo: %.2f\n", conta2.getNumeracao(), conta2.getSaldo());
+            System.out.printf("Conta %s - saldo: %.2f\n\n", conta2.getNumeracao(), conta2.getSaldo());
         } catch (Exception ex) {
             System.out.println(ex.getMessage() + "\n");
         }
@@ -35,7 +35,7 @@ public class Program {
             conta3.depositar(1600);
             System.out.printf("Conta %s - saldo: %.2f\n", conta3.getNumeracao(), conta3.getSaldo());
             conta3.aplicarAtualizacaoMensal();
-            System.out.printf("Conta %s - saldo: %.2f\n", conta3.getNumeracao(), conta3.getSaldo());
+            System.out.printf("Conta %s - saldo: %.2f\n\n", conta3.getNumeracao(), conta3.getSaldo());
         } catch (Exception ex) {
             System.out.println(ex.getMessage() + "\n");
         }
@@ -55,7 +55,7 @@ public class Program {
             System.out.printf("Conta %s - saldo: %.2f\n", conta5.getNumeracao(), conta5.getSaldo());
             conta5.sacar(30);
         } catch (Exception ex) {
-            System.out.println(ex.getMessage());
+            System.out.printf(ex.getMessage() + "\n");
         }
     }
 }
