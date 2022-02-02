@@ -10,12 +10,12 @@ public class Empregado {
         this.endereco = endereco;
     }
 
-    public String apresentar(){
-        return "Codigo: " + codigo + "\nNome: "
-                + nome + "\nBairro: "
-                + endereco.getBairro()
-                + "\nCidade: " + endereco.getCidade()
-                + "\nPais: " + endereco.getPais();
+    public void apresentar(){
+        System.out.println("Codigo: "+ codigo);
+        System.out.println("Nome: "+ nome);
+        System.out.println("Bairro: "+ endereco.getBairro());
+        System.out.println("Cidade: "+ endereco.getCidade());
+        System.out.println("Pais: "+ endereco.getPais());
     }
 
     public String getNome() {
