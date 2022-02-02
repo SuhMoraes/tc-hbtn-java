@@ -1,7 +1,7 @@
 import java.util.Locale;
 
 public class Program {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
         Locale.setDefault(new Locale("pt", "BR"));
         try {
             ContaBancariaTarifada conta1 = new ContaBancariaTarifada("AAA", 30.0);
@@ -42,4 +42,5 @@ public class Program {
             System.out.println(ex.getMessage() + "\n");
         }
     }
+}
 }
