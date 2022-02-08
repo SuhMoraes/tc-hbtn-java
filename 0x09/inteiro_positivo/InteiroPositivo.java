@@ -1,7 +1,7 @@
 public class InteiroPositivo {
 
-    int valor;
-    int count = 0;
+    private int valor;
+    private int count = 0;
 
     public InteiroPositivo(int valor) {
         this.valor = valor;
