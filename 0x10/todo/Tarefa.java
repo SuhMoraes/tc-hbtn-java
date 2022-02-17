@@ -38,7 +38,7 @@ public class Tarefa {
 
     public String modificadorDescricao() throws Exception {
         if(getDescricao() == null && getDescricao().isEmpty()){
-            throw new IllegalArgumentException("Descricao de tarefa inavlida");
+            throw new IllegalArgumentException("Descricao de tarefa invalida");
         }else {
             return descricao;
         }
