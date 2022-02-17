@@ -1,6 +1,6 @@
 public class PedidoCookie {
-    private String sabor;
-    private int quantidadeDeCaixas;
+   String sabor;
+   int quantidadeDeCaixas;
 
     public PedidoCookie(String sabor, int quantidadeDeCaixas) {
         this.sabor = sabor;
