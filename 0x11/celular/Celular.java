@@ -20,7 +20,7 @@ public class Celular {
        if (contato != null) {
            contatos.remove(contato);
        } else {
-           throw new IllegalArgumentException("Nao foi possivel remover contato. Contato nao existe.");
+           throw new IllegalArgumentException("Nao foi possivel remover contato. Contato nao existe");
        }
    }
 
