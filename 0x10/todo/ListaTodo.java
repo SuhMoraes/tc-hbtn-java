@@ -29,7 +29,7 @@ public class ListaTodo {
         for (Tarefa tarefa : tarefas) {
             if (tarefa.getIdentificador() == idTarefa) {
                 feita = true;
-                tarefa.setEstahFeia(true);
+                tarefa.setEstahFeita(true);
             }
         }
         return feita;
@@ -40,7 +40,7 @@ public class ListaTodo {
         for (Tarefa tarefa : tarefas) {
             if (tarefa.getIdentificador() == idTarefa) {
                 naoFeita = true;
-                tarefa.setEstahFeia(false);
+                tarefa.setEstahFeita(false);
             }
         }
         return naoFeita;
@@ -48,19 +48,19 @@ public class ListaTodo {
 
     public void fazerTodas() {
         for (Tarefa tarefa : tarefas) {
-            tarefa.setEstahFeia(true);
+            tarefa.setEstahFeita(true);
         }
     }
 
     public void desfazerTodas() {
         for (Tarefa tarefa : tarefas) {
-            tarefa.setEstahFeia(false);
+            tarefa.setEstahFeita(false);
         }
     }
 
     public void listarTarefas() {
         for (Tarefa tarefa : tarefas) {
-            if (tarefa.isEstahFeia()) {
+            if (tarefa.isEstahFeita()) {
                 System.out.println("[X] Id: " + tarefa.getIdentificador() + " Descricao: " + tarefa.getDescricao());
             } else {
                 System.out.println("[ ] Id: " + tarefa.getIdentificador() + " Descricao: " + tarefa.getDescricao());

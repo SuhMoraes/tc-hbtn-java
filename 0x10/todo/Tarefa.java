@@ -1,8 +1,8 @@
 public class Tarefa {
 
-    String descricao;
-    boolean estahFeia;
-    int identificador;
+   private String descricao;
+   private boolean estahFeita;
+   private int identificador;
 
     public Tarefa() {
     }
@@ -20,12 +20,12 @@ public class Tarefa {
         this.descricao = descricao;
     }
 
-    public boolean isEstahFeia() {
-        return estahFeia;
+    public boolean isEstahFeita() {
+        return estahFeita;
     }
 
-    public void setEstahFeia(boolean estahFeia) {
-        this.estahFeia = estahFeia;
+    public void setEstahFeita(boolean estahFeita) {
+        this.estahFeita = estahFeita;
     }
 
     public int getIdentificador() {
