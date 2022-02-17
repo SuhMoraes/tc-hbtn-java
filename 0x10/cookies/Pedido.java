@@ -15,7 +15,7 @@ public class Pedido {
     public int obterTotalCaixas(){
         int totalCx = 0;
         for (PedidoCookie pedidoCookie: cookies) {
-            totalCx += pedidoCookie.getQuantidadeDeCaixas();
+            totalCx += pedidoCookie.getQuantidadeCaixas();
         }
         return totalCx;
     }
