@@ -50,7 +50,7 @@ public class Banco {
         int cont = 0;
         for (Cliente c : agencia.getClientes()) {
             cont++;
-            System.out.println("Cliente: " + c.getNome() + "  [" + (cont) + "]");
+            System.out.println("Cliente: " + c.getNome() + " [" + (cont) + "]");
 
             if (imprimirTransacoes) {
                 int contTransacao = 0;
