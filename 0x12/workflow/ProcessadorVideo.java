@@ -29,7 +29,7 @@ public class ProcessadorVideo {
 
             Mensagem mensagem = new Mensagem();
 
-            String texto = String.format("%s - %s", video.getArquivo(), video.getFormato());
+            String texto = String.format("%s-%s", video.getArquivo(), video.getFormato().name());
 
             mensagem.setTipoMensagem(TipoMensagem.LOG);
             mensagem.setTexto(texto);
