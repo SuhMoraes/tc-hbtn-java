@@ -10,8 +10,6 @@ public class Program {
         Telefone telefone6 = new Telefone("17", "3444-1112");
         Telefone telefone7 = new Telefone("17", "3311-1566");
 
-        Telefone telefoneDuplicado1 = new Telefone("11", "9888-5551");
-        Telefone telefoneDuplicado2 = new Telefone("17", "3444-1112");
 
         ListaTelefonica listaTelefonica1 = new ListaTelefonica();
         listaTelefonica1.adicionarTelefone("Pedro Alvaro", telefone1);
@@ -21,18 +19,6 @@ public class Program {
         listaTelefonica1.adicionarTelefone("Maria Joaquina", telefone5);
         listaTelefonica1.adicionarTelefone("Carlos Alberto", telefone4);
         listaTelefonica1.adicionarTelefone("Carlos Alberto", telefone6);
-
-        try {
-            listaTelefonica1.adicionarTelefone("Pedro Alvaro", telefoneDuplicado1);
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
-
-        try {
-            listaTelefonica1.adicionarTelefone("Pedro Alvaro", telefoneDuplicado2);
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
 
         ArrayList<Telefone> telefones1 = listaTelefonica1.buscar("Pedro Alvaro");
         if (telefones1 == null)
