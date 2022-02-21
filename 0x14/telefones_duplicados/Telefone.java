@@ -1,31 +1,47 @@
 public class Telefone {
 
-    private String codArea;
-    private String num;
-
-    public Telefone(String codArea, String num) {
-        this.codArea = codArea;
-        this.num = num;
-    }
-
-    public String getCodArea() {
-        return codArea;
-    }
-
-    public void setCodArea(String codArea) {
-        this.codArea = codArea;
-    }
-
-    public String getNum() {
-        return num;
-    }
-
-    public void setNum(String num) {
-        this.num = num;
-    }
+    private String codigoArea;
+    private String numero;
 
     @Override
     public String toString() {
-        return "( " + codArea + ")" + num;
+        return "(" + codigoArea + ") " + numero;
+    }
+
+    public Telefone(String codigoArea, String numero) {
+        super();
+        this.codigoArea = codigoArea;
+        this.numero = numero;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 7;
+        result = prime * result + ((codigoArea == null) ? 0 : codigoArea.hashCode());
+        result = prime * result + ((numero == null) ? 0 : numero.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Telefone other = (Telefone) obj;
+        if (codigoArea == null) {
+            if (other.codigoArea != null)
+                return false;
+        } else if (!codigoArea.equals(other.codigoArea))
+            return false;
+        if (numero == null) {
+            if (other.numero != null)
+                return false;
+        } else if (!numero.equals(other.numero))
+            return false;
+        return true;
     }
 }

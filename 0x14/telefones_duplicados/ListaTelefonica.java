@@ -4,9 +4,10 @@ import java.util.HashSet;
 
 public class ListaTelefonica {
 
+
     static HashMap<String, HashSet<Telefone>> listaTelefonica = new HashMap<String, HashSet<Telefone>>();
 
-    ArrayList<Telefone> numeroExistente = new ArrayList<>();
+    ArrayList<Telefone> numeroCadastrado = new ArrayList<>();
 
     public HashMap<String, HashSet<Telefone>> adicionarTelefone(String nome, Telefone telefone) {
 
@@ -14,10 +15,11 @@ public class ListaTelefonica {
             throw new IllegalArgumentException("Telefone jah existente para essa pessoa");
         }
 
-        if(numeroExistente.contains(telefone)) {
+        if(numeroCadastrado.contains(telefone)) {
             throw new IllegalArgumentException("Telefone jah pertence a outra pessoa");
         }
-        numeroExistente.add(telefone);
+
+        numeroCadastrado.add(telefone);
         if (listaTelefonica.containsKey(nome)) {
             listaTelefonica.get(nome).add(telefone);
         } else {
@@ -33,4 +35,5 @@ public class ListaTelefonica {
 
         return listaTelefonica.get(nome);
     }
+
 }
