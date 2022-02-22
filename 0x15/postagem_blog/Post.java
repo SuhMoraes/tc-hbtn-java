@@ -48,7 +48,7 @@ public class Post implements Comparable<Post> {
 
     @Override
     public String toString() {
-        return  titulo;
+        return titulo;
     }
 
     @Override

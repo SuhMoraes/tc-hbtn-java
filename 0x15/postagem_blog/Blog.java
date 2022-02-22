@@ -37,6 +37,7 @@ public class Blog {
 
                 obterContagemPorCategoria.replace(categoria, contadorCategoria);
             }
+
         }
         return obterContagemPorCategoria;
     }
@@ -52,7 +53,7 @@ public class Blog {
     }
 
     public Set<Post> obterPostsPorCategoria(Categorias categorias) {
-        TreeSet<Post> post = new TreeSet<>();
+        Set<Post> post = new TreeSet<>();
         for (Post postagem: posts) {
             if (postagem.getCategoria().compareTo(categorias) == 0) {
                 post.add(postagem);
@@ -64,13 +65,17 @@ public class Blog {
     public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
         Map<Categorias, Set<Post>> categoriasSetMap = new TreeMap<>();
         Set<Post> postSet = new TreeSet<>();
+
         for (Post post: posts) {
             postSet = new TreeSet<>();
+
             Categorias categoria = post.getCategoria();
             Set<Post> posts = categoriasSetMap.get(categoria);
+
             if (posts == null){
                 postSet.add(post);
                 categoriasSetMap.put(categoria, postSet);
+
             } else if (!postExiste(post, posts)) {
                 posts.add(post);
                 categoriasSetMap.replace(categoria, postSet);
