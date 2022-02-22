@@ -63,26 +63,21 @@ public class Blog {
     }
 
     public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
-        Map<Categorias, Set<Post>> categoriasSetMap = new TreeMap<>();
-        Set<Post> postSet = new TreeSet<>();
-
-        for (Post post: posts) {
-            postSet = new TreeSet<>();
-
-            Categorias categoria = post.getCategoria();
-            Set<Post> posts = categoriasSetMap.get(categoria);
-
-            if (posts == null){
-                postSet.add(post);
-                categoriasSetMap.put(categoria, postSet);
-
-            } else if (!postExiste(post, posts)) {
-                posts.add(post);
-                categoriasSetMap.replace(categoria, postSet);
+        Map<Categorias, Set<Post>> todosPosts = new TreeMap<>();
+        for (Post post : posts) {
+            Set<Post> postagem;
+            if (todosPosts.containsKey(post.getCategoria())) {
+                postagem = todosPosts.get(post.getCategoria());
+            } else {
+                postagem = new TreeSet<>();
             }
+
+            postagem.add(post);
+            todosPosts.put(post.getCategoria(), postagem);
         }
 
-        return categoriasSetMap;
+        return todosPosts;
+
     }
 
     public Map<Autor, Set<Post>> obterTodosPostsPorAutor() {
