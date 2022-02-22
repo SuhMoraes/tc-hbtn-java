@@ -1,32 +1,32 @@
 public class Telefone {
 
-    private String codArea;
-    private String num;
+    private String codigoArea;
+    private String numero;
 
-    public Telefone(String codArea, String num) {
-        this.codArea = codArea;
-        this.num = num;
+    public Telefone(String codigoArea, String numero) {
+        this.codigoArea = codigoArea;
+        this.numero = numero;
     }
 
-    public String getCodArea() {
-        return codArea;
+    public String getCodigoArea() {
+        return codigoArea;
     }
 
-    public void setCodArea(String codArea) {
-        this.codArea = codArea;
+    public void setCodigoArea(String codigoArea) {
+        this.codigoArea = codigoArea;
     }
 
-    public String getNum() {
-        return num;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setNum(String num) {
-        this.num = num;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
     @Override
     public String toString() {
-        return "( " + codArea + ")" + num;
+        return "( " + codigoArea + ")" + numero;
     }
 }
 
