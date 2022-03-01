@@ -60,7 +60,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-       return String.format("[%d] " + "%s "+ "%s "+ "%s "+ "R$ %f ",
+       return String.format("[%d] " + "%s "+ "%s "+ "%s "+ "R$ %f",
                getCodigo(), getNome(), getCargo(), getIdade(), getSalário());
     }
 }
