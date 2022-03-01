@@ -9,7 +9,7 @@ public class Program {
         Pessoa pessoa2 = new Pessoa(2, "Derry Collier", "Desenvolvedor", 45, 8600,
                 List.of("assistir futebol", "assistir filmes"));
         Pessoa pessoa3 = new Pessoa(3, "Mikey Berg", "Product Owner", 51, 11350,
-                List.of("assistir filmes", "assistir futebol", "assistir series", "balada", "jogar futebol", "ouvir musica"));
+                List.of("ouvir musica", "jogar futebol", "assistir series"));
         Pessoa pessoa4 = new Pessoa(4, "Diana Hayes", "Product Owner", 33, 7400,
                 List.of("jogar futebol", "assistir filmes", "balada"));
         Pessoa pessoa5 = new Pessoa(5, "Ellen Costa", "Product Owner", 51, 12500,
@@ -28,11 +28,11 @@ public class Program {
         List<Pessoa> todasPessoas = List.of(pessoa1, pessoa2, pessoa3, pessoa4, pessoa5,
                 pessoa6, pessoa7, pessoa8, pessoa9, pessoa10);
 
-        Map<String, List<String>> pessoas1 = ConsultaPessoas.obterHobbiesPorCargo(todasPessoas);
-        Map<String, List<String>> pessoas2 = ConsultaPessoas.obterHobbiesPorCargo(
+        Map<String, TreeSet<String>> pessoas1 = ConsultaPessoas.obterHobbiesPorCargo(todasPessoas);
+        Map<String, TreeSet<String>> pessoas2 = ConsultaPessoas.obterHobbiesPorCargo(
                 List.of(pessoa1, pessoa2, pessoa3, pessoa4, pessoa9, pessoa10)
         );
-        Map<String, List<String>> pessoas3 = ConsultaPessoas.obterHobbiesPorCargo(
+        Map<String, TreeSet<String>> pessoas3 = ConsultaPessoas.obterHobbiesPorCargo(
                 List.of(pessoa1, pessoa3, pessoa4, pessoa5, pessoa9)
         );
 

@@ -36,8 +36,8 @@ public class ConsultaPessoas {
                 Collectors.averagingDouble(Pessoa::getSalario)));
     }
 
-    public static Map<String, List<String>> obterHobbiesPorCargo (List<Pessoa> pessoa){
-        return pessoa.stream().collect(Collectors.groupingBy(Pessoa::getCargo,
-                Collectors.flatMapping(p -> p.getHobbies().stream(), Collectors.toList())));
+    public static Map<String, TreeSet<String>> obterHobbiesPorCargo(List<Pessoa> todasPessoas) {
+        return todasPessoas.stream().collect(Collectors.groupingBy(Pessoa::getCargo,
+                        Collectors.flatMapping(p -> p.getHobbies().stream(), Collectors.toCollection(TreeSet::new))));
     }
 }
