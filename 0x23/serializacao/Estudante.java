@@ -45,6 +45,6 @@ public class Estudante implements Serializable {
                 "nome='" + nome +
                 "', idade='" + idade +
                 "', senha='" + senha + '\'' +
-                '}';
+                " }";
     }
 }
